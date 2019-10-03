@@ -1,12 +1,8 @@
 "use strict";
 function checkType(valueParametr) {
-    switch (typeof(valueParametr)) {
-    case "number":
-        return "number";
-    case "string":
-        return "string";
-    default:
-        return undefined;
-    }
+    if (typeof valueParametr === "number" || typeof valueParametr === "string") {
+	    return typeof valueParametr;
+	} 
+	return undefined;
 }
 module.exports = checkType;
