@@ -1,6 +1,6 @@
 "use strict";
 function chekSimpleNumber(valueParametr) {
-    let resultat;
+    let result;
     if (typeof(valueParametr) !== "number") {
         return "Передоваемый параметр не числового типа";
     }
@@ -12,15 +12,14 @@ function chekSimpleNumber(valueParametr) {
     }
 	outerWhile:
     for (let i = 2; i < valueParametr; i++) {
-      switch (valueParametr % i) {
-      case 0:
-	    resultat = "Число "+valueParametr+" - составное число";
-        break outerWhile;
-      default: 
-        resultat = "Число "+valueParametr+" - простое число";
-        continue;
-      };
+		if (valueParametr % i === 0) {
+			result = "Число "+valueParametr+" - составное число";
+			break outerWhile;
+		} else {
+			result = "Число "+valueParametr+" - простое число";
+			continue;
+		};
     };
-    return resultat;
+    return result;
 }
 module.exports = chekSimpleNumber;
