@@ -1,22 +1,22 @@
 "use strict";
 function checkNumber(myArray) {
-    let notEventNumber = 0, eventNumber = 0, zeroNumber = 0, arrayNumber;
+    let odd = 0, event = 0, zero = 0, arrayNumber;
     for (let i = 0; i < myArray.length; i++) {
         if(typeof myArray[i] !== "number") {
           continue;
         };
         if(myArray[i] === 0) {
-          zeroNumber += 1;
+          zero += 1;
           continue;
         };
 		if (myArray[i] % 2 === 0) {
-			eventNumber += 1;
+			event += 1;
 		} else {
-			notEventNumber += 1;
+			odd += 1;
 			};
         };
     
-    arrayNumber = [eventNumber,notEventNumber,zeroNumber];
+    arrayNumber = [event,odd,zero];
     return arrayNumber;
 }
 module.exports = checkNumber;
