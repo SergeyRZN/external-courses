@@ -1,6 +1,5 @@
 "use strict";
 function blankProto() {
-	const proto = {};
-	const obj = Object.create(proto);
+	return Object.create(null);
 }
-module.exports = displayObject;
+module.exports = blankProto;
