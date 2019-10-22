@@ -1,18 +1,16 @@
 "use strict";
 function analogMethodReduce(array, callback, initialValue) {
-	let previousValue;
-	if (!initialValue) {
-		previousValue = array[0];
-		for (let i=1; i<array.length; i++) {
-		previousValue = callback(previousValue, array[i], i, array);
-		};
-	} else {
+	let previousValue, i;
+	if (initialValue) {
+		i = 0;
 		previousValue = initialValue;
-		for (let i=0; i<array.length; i++) {
-		previousValue = callback(previousValue, array[i], i, array);
-		};
+	} else {
+		previousValue = array[0];
+		i = 1;
 	};
-	
-  return previousValue;
+	for (i; i<array.length; i++) {
+		previousValue = callback(previousValue, array[i], i, array);
+	};
+	return previousValue;
 };
 module.exports = analogMethodReduce;
