@@ -1,0 +1,19 @@
+  
+button {
+	position: absolute;
+	top: 50px;
+	right: 550px;
+	border: 1px solid #b0b0b0;
+	box-shadow: 0 2px 2px 0 #525252, 0 0 0 5px #c7c7c7,  0 0 0 6px white,
+	0 0 0 7px #525252, inset 0 17px 0 0 #e1e1e1;
+	border-radius: 5px;
+	padding: 10px 5px;
+	color: #525252;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: linear-gradient(to bottom, #e1e1e1 30%, #b0b0b0 80%);
+}
+
+span {
+    color: #828181;
+}
