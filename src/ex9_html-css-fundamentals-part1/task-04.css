@@ -1,0 +1,44 @@
+div {
+	width: 400px;
+	height: 200px;
+}
+.box_shadow{
+	background: #60B88D;
+	box-shadow: 15px 15px 0 #90CDAF, 25px 25px 0 #BFE3D1;
+}
+.relative_one{
+	position: Relative;
+	top: 100px;
+	left: 25px;
+	background-color: #BFE3D1;
+}
+.relative_two{
+	position: Relative;
+	top: -10px;
+	left: -10px;
+	background-color: #90CDAF;
+}
+.relative_three {
+	position: Relative;
+	top: -15px;
+	left: -15px;
+	background-color: #60B88D;
+}
+.absolute_one{
+	position: Absolute;
+	top: 600px;
+	left: 35px;
+	background-color: #BFE3D1;
+}
+.absolute_two {
+	position: Absolute;
+	top: 590px;
+	left: 25px;
+	background-color: #90CDAF;
+}
+.absolute_three {
+	position: Absolute;
+	top: 575px;
+	left: 10px;
+	background-color: #60B88D;
+}
