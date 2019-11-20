@@ -1,0 +1,90 @@
+@keyframes spin {
+  100% {
+   transform: rotate(360deg);
+  }
+}
+
+.animation_1 {
+  width: 30px;
+  height: 30px;
+  border: 6px solid #000;
+  border-left-color: #333;
+  border-right-color: transparent;
+  border-bottom-color: #555;
+  border-radius: 100%;
+  animation: spin 600ms infinite linear;
+}
+
+@keyframes 
+ball{
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 200px;
+  }
+  50%{
+    margin-left: 400px;
+  }
+  75%{
+    margin-left: 200px;
+  }
+  100%{
+    margin-left: 0;
+  }
+}
+
+.animation_2 {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border-left: 100px solid #000;
+  border-right: 100px solid #000;
+  margin-bottom: 100px;
+}
+
+.animation_2_1{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: green;
+  animation: ball 5s infinite linear;
+}
+
+.animation_3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: infinite_measures 10s linear infinite;
+}
+@keyframes infinite_measures {
+    0% {
+        background: radial-gradient(yellow, black);
+		border-radius: 50%;
+    }
+    20% {
+        background: radial-gradient(yellow, black);
+        transform: rotate(15deg) skew(0deg,0deg) scale(1,1);
+        border-radius: 0;
+    }
+    40% {
+		background: linear-gradient(to top left, red, green); 
+        transform: rotate(180deg) skew(5deg,5deg) scale(1,1);
+       
+    }
+    60% {
+		background: linear-gradient(to bottom, purple 40%, gray 80%, blue 100%);
+        transform: rotate(180deg) skew(0deg,0deg) scale(1,1);
+        border-radius: 50%;
+     }
+    80% {
+		background: linear-gradient(to top left, red, green); 
+        transform: rotate(15deg) skew(0deg,0deg) scale(1,1);
+        border-radius: 0;        
+    }
+    100% {
+		background: linear-gradient(to top left, red, green); 
+        transform: rotate(15deg) skew(5deg,5deg) scale(2,1);   
+    }
+}
