@@ -2,35 +2,35 @@
 let calculator = {
 	result: 0,
 	add(value = 0){ 
-		if(typeof value === "number") {
-			calculator.result += value;
+		if(Number(value)) {
+			this.result += value;
 		};
 		return add;
 	},
     subtract(value = 0) {
-		if(typeof value === "number") {
-			calculator.result -= value;
+		if(Number(value)) {
+			this.result -= value;
 		};
 		return subtract;
     },
     divide(value = 1) {
-		if(typeof value === "number") {
-			calculator.result /= value;
+		if(Number(value)) {
+			this.result /= value;
 		};
 		return divide;
     },
     multiply(value = 1) {
-		if(typeof value === "number") {
-			calculator.result *= value;
+		if(Number(value)) {
+			this.result *= value;
 		};
 		return multiply;
     },   
     getResult() {
-        return calculator.result;
+        return this.result;
     },
     reset() {
-        calculator.result = 0;
-        return calculator.result;
+        this.result = 0;
+        return this.result;
     } 
 };
 return calculator.result;
